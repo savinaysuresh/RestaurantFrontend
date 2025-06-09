@@ -1,3 +1,4 @@
+/* Reset and Font */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -5,6 +6,7 @@ body {
   color: #f3f4f6;
 }
 
+/* Header Styles */
 header {
   background-color: #1f2937;
   padding: 20px;
@@ -32,6 +34,7 @@ header h1 {
   background-color: #2563eb;
 }
 
+/* Main Content Layout */
 .main-content {
   padding: 30px;
 }
@@ -42,27 +45,30 @@ header h1 {
   gap: 15px;
 }
 
+/* Order Card */
 .order-card {
   background-color: #1f1f2d;
   border-left: 6px solid;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Order Status Color Coding */
 .order-card[data-status="ordered"] {
-  border-color: #f59e0b;
+  border-color: #f59e0b; /* amber */
 }
 .order-card[data-status="prepared"] {
-  border-color: #10b981;
+  border-color: #10b981; /* green */
 }
 .order-card[data-status="preparing"] {
-  border-color: #3b82f6;
+  border-color: #3b82f6; /* blue */
 }
 .order-card[data-status="declined"] {
-  border-color: #ef4444;
+  border-color: #ef4444; /* red */
 }
 
+/* Order Header */
 .order-header {
   display: flex;
   justify-content: space-between;
@@ -72,7 +78,7 @@ header h1 {
 
 .order-header strong {
   font-size: 18px;
-  color: #fbbf24;
+  color: #fbbf24; /* yellow */
 }
 
 .order-header em {
@@ -84,12 +90,14 @@ header h1 {
   color: #d1d5db;
 }
 
+/* Item List */
 .order-items {
   list-style: none;
   padding-left: 20px;
   margin-bottom: 15px;
 }
 
+/* Buttons */
 .buttons button {
   padding: 8px 14px;
   margin-right: 10px;
@@ -101,14 +109,66 @@ header h1 {
   transition: background-color 0.3s ease;
 }
 
-.accept { background-color: #10b981; }
-.accept:hover { background-color: #059669; }
+/* Button Colors by Action */
+.accept {
+  background-color: #10b981;
+}
+.accept:hover {
+  background-color: #059669;
+}
 
-.decline { background-color: #ef4444; }
-.decline:hover { background-color: #dc2626; }
+.decline {
+  background-color: #ef4444;
+}
+.decline:hover {
+  background-color: #dc2626;
+}
 
-.ready { background-color: #3b82f6; }
-.ready:hover { background-color: #2563eb; }
+.ready {
+  background-color: #3b82f6;
+}
+.ready:hover {
+  background-color: #2563eb;
+}
 
-.take { background-color: #f59e0b; }
-.take:hover { background-color: #d97706; }
+.take {
+  background-color: #f59e0b;
+}
+.take:hover {
+  background-color: #d97706;
+}
+
+.status-label {
+  font-style: normal;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.status-label.ordered {
+  background-color: #fef3c7; /* light amber */
+  color: #b45309;
+}
+
+.status-label.preparing {
+  background-color: #dbeafe; /* light blue */
+  color: #1d4ed8;
+}
+
+.status-label.prepared {
+  background-color: #d1fae5; /* light green */
+  color: #047857;
+}
+
+.status-label.taken {
+  background-color: #fcd34d;
+  color: #92400e;
+}
+
+.status-label.declined {
+  background-color: #fee2e2; /* light red */
+  color: #b91c1c;
+}
+
